@@ -13,7 +13,7 @@ is a hard error (use `--debug` or `--no-debug`), `--port abc` throws
 ## Install
 
 ```bash
-npm install argv-strict
+npm install && npm run build
 ```
 
 Requires Node 18+ and TypeScript 5.x.
