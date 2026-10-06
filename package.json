@@ -1,7 +1,7 @@
 {
   "name": "argv-strict",
   "version": "1.0.0",
-  "description": "Strict typed argv parser for TypeScript — every option has an explicit schema, booleans are never coerced from strings.",
+  "description": "Strict typed argv parser for TypeScript \u2014 every option has an explicit schema, booleans are never coerced from strings.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -11,7 +11,8 @@
     "build": "tsc",
     "test": "jest --verbose",
     "test:coverage": "jest --coverage --verbose",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pretest": "node --test dependency-audit.test.cjs"
   },
   "keywords": [
     "argv",
@@ -38,5 +39,10 @@
     "jest": "^30.5.2",
     "ts-jest": "^29.4.14",
     "typescript": "^5.4.5"
+  },
+  "overrides": {
+    "js-yaml": {
+      "argparse": "2.0.1"
+    }
   }
 }
